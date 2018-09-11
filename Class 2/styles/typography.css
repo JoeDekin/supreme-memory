@@ -1,6 +1,11 @@
 /* Header Styles*/
 h1 {
     color: rgb(223, 223, 223);
+
+}
+
+p {
+    color: rgb(223, 223, 223);
 }
 
 /*List Styles*/
@@ -20,6 +25,7 @@ font-size: 45px;
 nav {
     align-content: center;
     align-items: center;
+    text-align: center;
 }
 
 header
