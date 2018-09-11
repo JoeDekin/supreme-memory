@@ -1,9 +1,11 @@
 body {
-    background-color: black
+    background-color: black;
+    margin: 10px;
 }
 
 header {
-    background-color: goldenrod;
+    background-color: gold;
+    margin: 10px;
 }
 
 main {
