@@ -1,6 +1,6 @@
 /* Header Styles*/
 h1 {
-    color: rebeccapurple;
+    color: rgb(223, 223, 223);
 }
 
 /*List Styles*/
@@ -16,5 +16,13 @@ margin-left: 20px;
 font-size: 45px;
 }
 
+/* nav styles */
+nav {
+    align-content: center;
+}
+
+body{
+
+}
 /*Anchors & Links*/
 

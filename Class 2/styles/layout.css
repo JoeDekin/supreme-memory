@@ -1,5 +1,5 @@
 body {
-    background-color: darkslategrey
+    background-color: black
 }
 
 header {
@@ -7,6 +7,6 @@ header {
 }
 
 main {
-    background-color: darkmagenta;
+    background-color: rgb(95, 2, 95);
 }
 
