@@ -19,6 +19,7 @@ font-size: 45px;
 /* nav styles */
 nav {
     align-content: center;
+    align-items: center;
 }
 
 body{
