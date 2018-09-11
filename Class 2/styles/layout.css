@@ -1,8 +1,12 @@
+body {
+    background-color: darkslategrey
+}
+
 header {
-    background-color: aquamarine;
+    background-color: gold;
 }
 
 main {
-    background-color: darksalmon;
+    background-color: darkmagenta;
 }
 
