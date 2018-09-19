@@ -17,13 +17,15 @@ padding: 7%;
 }
 
 .p{ word-wrap: break-word;
-text-width: 33%;}
+text-width: 33%;
+overflow: auto;}
 
 @media screen and (min-width: 500px) {
 
 .p {
 width: 500px;
-word-break:break-word;
+word-break:break-word
+overflow: auto;;
 }
 
 .fullcard{

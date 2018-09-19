@@ -1,0 +1,46 @@
+h1{
+    color: white;
+}
+body{
+    width:760px;
+
+
+}
+ul{
+list-style-type:none;
+
+}
+
+li {
+    display:inline-block
+}
+
+nav {
+    background-color: red;
+    width: 100%;
+    position: fixed;
+}
+main{
+margin-top:100px;
+width:760px;
+height:100px;
+margin-left:auto;
+margin-right:auto;
+background-color: purple;
+
+}
+.relative-position{
+position:relative;
+background-color: black;
+width:250px;
+height:150px;
+left:100px;
+top:50px;
+}
+
+.absolute-position{
+    position:absolute;
+    width:75px;
+    height:50px;
+    background-color:white;
+}
