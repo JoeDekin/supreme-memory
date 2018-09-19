@@ -16,18 +16,37 @@ padding: 7%;
 
 }
 
+.p{ word-wrap: break-word;
+text-width: 33%;}
+
+@media screen and (min-width: 500px) {
+
+.p {
+width: 500px;
+word-break:break-word;
+}
+
 .fullcard{
     width: 45%;
+    word-break:break-word;
 }
 
 .fullcard:first-child{
 float: left;
+  width: 33.33%;
 
 }
 .fullcard:nth-child(2){
 float: right;
-
+  width: 33.33%;
 }
+
+.fullcard:nth-child(3){
+float: right;
+  width: 33.33%;
+}
+
+
 
 .fullcard img{
     width: 100%;
@@ -36,4 +55,6 @@ float: right;
 .clearfix{
 
 clear: both;
+}
+
 }
