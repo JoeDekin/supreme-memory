@@ -1,0 +1,84 @@
+header{
+        align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.main{
+align-content: center;
+}
+body{
+    background-color: pink;
+}
+.column {
+    float: auto;
+    
+    width: 97%;
+    background-color: gold;
+    padding: 7px;
+    margin: 7px;
+
+
+}
+.row {
+    float: right;
+ 
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+
+}
+
+@media screen and (min-width: 768px){
+.column {
+    float: auto;
+    
+    width: 97%;
+    background-color: gold;
+    padding: 7px;
+    margin: 7px;
+
+
+}
+
+
+.column:first-child{
+float: left;
+  width: 25%;
+
+}
+.column:nth-child(2){
+float: right;
+  width: 25%;
+}
+
+.column:nth-child(3){
+float: right;
+  width: 25%;
+}
+.column:nth-child(4){
+float: right;
+  width: 25%;
+}
+
+.row {
+    float: right;
+ 
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.p
+{ word-wrap: break-word;
+text-width: 25%;
+overflow: auto;
+font-family:courier;}
+}
