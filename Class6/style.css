@@ -10,6 +10,7 @@
   
   body {
     font-family: 'andale', monospace;
+    margin-top: 75px;
   }
   
   .fancy-img {
@@ -27,3 +28,46 @@
     background-position: center;
     background-size: cover;
   }
+  ul{
+    list-style-type:none;
+        margin: 0px;
+    
+    
+    }
+    
+    li {
+        display:inline-block
+    }
+    
+    nav {
+        background-color: red;
+        width: 100%;
+        position: fixed;
+        padding: 20px;
+        top: 0px;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    header
+{
+    align-content: center;
+}
+
+.blogpost {
+    float: left;
+    width: 25%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+@media screen and (max-width: 600px) {
+    .blogpost {
+        width: 100%;
+    }
+}
