@@ -1,13 +1,9 @@
-@font-face {
-    font-family: 'veranda';
-    src: 
-      url(fonts/andale_mono-webfont.woff2) format('woff2'), 
-      url(fonts/andale_mono-webfont.woff) format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
   
   h1 {
+    font-family: Arial, Helvetica, sans-serif;
     align-content: center;
     align-items: center;
     text-align: center;
@@ -95,9 +91,12 @@ li a:hover {
     float: left;
     width: 50%;
 }
-
+.row {
+align-content: center;
+}
 /* Clear floats after the columns */
 .row:after {
+    align-content: center;
     content: "";
     display: table;
     clear: both;
@@ -110,4 +109,6 @@ li a:hover {
     .image {
         width: 93%;
     }
-}
+.row {
+    align-content: center;
+    }
