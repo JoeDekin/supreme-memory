@@ -1,17 +1,29 @@
-<!DOCTYPE html>
 
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
 <body>
 
-    <li id="docheader"></li>
-    <script>
-    document.getElementById("docheader").innerHTML(Hello, World!);
-    </script>
+  <h1 id="docHeader">Goodbye, Sky!</h1>
+  <script>
+    // this is my header text
+    var myText = "Hello, Sky!";
+    // this is a numberic value for my header font size
+    var myTextSize = Math.random()*100;
+    var red = Math.random()*255;
+    var green  = Math.random()*255;
+    var blue = Math.random()*255;
+    var docHeader = document.getElementById("docHeader");
+    
+    docHeader.innerHTML = myText;
+    docHeader.style.fontSize = myTextSize + "px";
+    docHeader.style.color = "rgb(" + green + ", 0, 255)"; //rgb(green + blue + red + , 0, 255)
+  </script>
 </body>
 </html>
