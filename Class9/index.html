@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,20 +9,70 @@
 </head>
 <body>
 
+  <div class="button-container">
+    <button onclick="changeMyText()">Change Text</button>
+    <button onclick="changeMyColor()">Change Color</button>
+
+
+  </div>
+
+
   <h1 id="docHeader">Goodbye, Sky!</h1>
   <script>
-    // this is my header text
-    var myText = "Hello, Sky!";
-    // this is a numberic value for my header font size
-    var myTextSize = Math.random()*100;
-    var red = Math.random()*255;
-    var green  = Math.random()*255;
-    var blue = Math.random()*255;
     var docHeader = document.getElementById("docHeader");
+    var changeMyText = function(){
+      // this is my header text
+      var myText = "Hello, World!"
+     
+
+
+      docHeader.innerHTML = myText;
+    }
+    var changeMyColor = function(){
+      var red = Math.random()*255;
+      var green  = Math.random()*255;
+      var blue = Math.random()*255;
+      var RGBval = "rgb(" + red + ", " + green + ", " + blue + ")";
+      docHeader.style.color = RGBval;
+    }
+
+
+    //var txt = document.getElementById('a');
+    //var style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+    //var currentSize = parseFloat(style);
+    //txt.style.fontSize = (currentSize + 100) + 'px';
+
+     
+
+
+      //docHeader.innerHTML = mySize;}
     
-    docHeader.innerHTML = myText;
-    docHeader.style.fontSize = myTextSize + "px";
-    docHeader.style.color = "rgb(" + green + ", 0, 255)"; //rgb(green + blue + red + , 0, 255)
+    // this is a numberic value for my header font size
+    // var myTextSize = Math.random()*100;
+    // console.log(docHeader);
+    // docHeader.style.fontSize = myTextSize + "px";
   </script>
+
+
+<button type="button" onclick="myFunction1()">Set font size</button>
+
+<p id="myP">Change Size!</p>
+
+ 
+<script>
+function myFunction1() {
+    document.getElementById("myP").style.fontSize = Math.floor((Math.random() * 20) + 5)+"px";
+}
+</script>
+<div id="fontfamily">FONTS FONTS FONTS</div>
+<button onclick="myFunction()">Change Font</button>
+<script>
+var fontType = ["Arial", "Verdana", "Courier"];
+
+function myFunction(e) {
+    document.getElementById("fontfamily").style.fontFamily = fontType[Math.floor(Math.random() * fontType.length)];
+}
+</script>
+
 </body>
 </html>
