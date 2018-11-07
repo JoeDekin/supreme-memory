@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+  <style>
+    #message {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  
+
+  <h1 id="docHeader">HARE KRSHNA</h1>
+  
+  <div class="button-container">
+    <button onclick="showHeader()" id="showButton">Show Header!</button>
+    <button onclick="hideHeader()" id="hideButton">Hide Header!</button>
+  </div>
+  <p id="message"></p>
+
+  <img id="docImage" img src="https://cdn.shopify.com/s/files/1/0969/9128/products/Indian_Art_-_Mahabharat_-_Lord_Krishna_Driving_Chariot_Of_Arjun_bed069ac-8d89-4fe5-b975-40e365e5b07e.jpg?v=1480492578" width="300" height="400">
+  
+  <div class="button-container">
+    <button onclick="showImage()" id="showButton">Reveal Image!</button>
+    <button onclick="hideImage()" id="hideButton">Hide Image!</button>
+  </div>
+
+  <p id="message"></p>
+  <div class="button-container">
+      <h1 id="DocText">HARE KRSHNA</h1>
+        <button onclick="changeText()">Change Text</button>
+        <button onclick="hideColor()">Change Color</button>
+
+  
+  <p id="message"></p>
+  <script>
+    var header = document.getElementById("docHeader");
+    function showHeader(){
+      document.getElementById("message").innerText = "";
+      document.getElementById("hideButton").removeAttribute("disabled");
+      if(header.style.visibility === "visible"){
+        document.getElementById("showButton").setAttribute("disabled", "disabled");
+        document.getElementById("message").innerText = "The header is already showing!";
+      }
+      header.style.visibility = "visible";
+    }
+
+    function hideHeader(){
+      document.getElementById("message").innerText = "";
+      document.getElementById("showButton").removeAttribute("disabled");
+      if(header.style.visibility === "hidden"){
+        document.getElementById("hideButton").setAttribute("disabled", "disabled");
+        document.getElementById("message").innerText = "The header is already hidden!";
+      }
+      header.style.visibility = "hidden";
+    }
+    var Image = document.getElementById("docImage");
+        function showImage(){
+      document.getElementById("message").innerText = "";
+      document.getElementById("hideButton").removeAttribute("disabled");
+      if(header.style.visibility === "visible"){
+        document.getElementById("showButton").setAttribute("disabled", "disabled");
+        document.getElementById("message").innerText = "The Image is already showing!";
+      }
+      Image.style.visibility = "visible";
+    }
+    function hideImage(){
+      document.getElementById("message").innerText = "";
+      document.getElementById("showButton").removeAttribute("disabled");
+      if(header.style.visibility === "hidden"){
+        document.getElementById("hideButton").setAttribute("disabled", "disabled");
+        document.getElementById("message").innerText = "The image is already hidden!";
+      }
+      Image.style.visibility = "hidden";
+    }
+    
+    var docHeader = document.getElementById("docText");
+    function changeText(){
+      // this is my header text
+      var myText = "Hello, World!"
+    }
+  </script>
+</body>
+</html>
