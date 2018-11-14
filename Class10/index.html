@@ -6,6 +6,7 @@
   <title>Page Title</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
   <style>
     #message {
@@ -16,7 +17,7 @@
 <body>
   
 
-  <h1 id="docHeader">HARE KRSHNA</h1>
+  
   
   <div class="button-container">
     <button onclick="showHeader()" id="showButton">Show Header!</button>
@@ -24,22 +25,53 @@
   </div>
   <p id="message"></p>
 
-  <img id="docImage" img src="https://cdn.shopify.com/s/files/1/0969/9128/products/Indian_Art_-_Mahabharat_-_Lord_Krishna_Driving_Chariot_Of_Arjun_bed069ac-8d89-4fe5-b975-40e365e5b07e.jpg?v=1480492578" width="300" height="400">
+  <h1 id="docHeader">HARE KRSHNA</h1>
   
   <div class="button-container">
-    <button onclick="showImage()" id="showButton">Reveal Image!</button>
-    <button onclick="hideImage()" id="hideButton">Hide Image!</button>
+    <button id="imgToggle">Hide Image!</button>
+    <button id="imgSwitch">Change Image!</button>
   </div>
-
+  <div class="img-container">
+ <img id="docImage" img src="https://cdn.shopify.com/s/files/1/0969/9128/products/Indian_Art_-_Mahabharat_-_Lord_Krishna_Driving_Chariot_Of_Arjun_bed069ac-8d89-4fe5-b975-40e365e5b07e.jpg?v=1480492578" width="300" height="400" alt="Krshna" class="page-img">
+ <img src="http://www.bhmpics.com/thumbs/lord_vishnu_and_the_10_avatars-t3.jpg" alt="Vishnu" class="page-img" style="display:none;">
+ </div>
   <p id="message"></p>
-  <div class="button-container">
-      <h1 id="DocText">HARE KRSHNA</h1>
-        <button onclick="changeText()">Change Text</button>
-        <button onclick="hideColor()">Change Color</button>
+  <button>Press This!</button>
+<p>Hello</p>
+<p style="display: none">Good Bye</p>
 
   
   <p id="message"></p>
   <script>
+  $(document).ready(function(){
+            $('#imgToggle').click(function(){
+                imageToggle();
+            });
+            $('#imgSwitch').click(function(){
+                imageSwitch();
+            });
+            var imageToggle = function(){
+                // see https://api.jquery.com/toggle-event/
+                $('.img-container').toggle();
+                // see https://api.jquery.com/css/
+                if($('.img-container').css('display') === 'none'){
+                    $('#imgToggle').text("Reaveal Image!");
+                }
+                else {
+                    $('#imgToggle').text("Hide Image!");
+                }
+            }
+            var imageSwitch = function(){
+                // see https://api.jquery.com/toggle-event/
+                $('.page-img').toggle();
+            }
+        });
+
+        $( "button" ).click(function() {
+  $( "p" ).toggle();
+});
+
+
     var header = document.getElementById("docHeader");
     function showHeader(){
       document.getElementById("message").innerText = "";
@@ -85,6 +117,10 @@
       // this is my header text
       var myText = "Hello, World!"
     }
+
+
+
+    
   </script>
 </body>
 </html>
