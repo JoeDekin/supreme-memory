@@ -1,35 +1,109 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>title</title>
-    <link rel="stylesheet" href="main.css" type="text/css" media="screen">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
 
-  </head>
-  <body>
-  
-<div class="button-container">
-    <button id="append"></button>
-</div>
+    <div class="button-container">
+        <button id="append">Append</button>
+        <button id="prepend">Prepend</button>
 
-    <div class="box box1 bordered"></div>
+        <button id="appendTo">Append To</button>
+        <button id="prependTo">Prepend To</button>
 
-    <div class="box box2"></div>
+        <button id="after">After</button>
+        <button id="before">Before</button>
 
-<script>
-    var appendAnElement = function(){
-        $('.box1').append("<h3>Hello, World!</h3>");
-    }
+        <button id="remove">Remove</button>
+    </div>
 
-$('append').click(function(){
-    appendAnElement();
+    <div class="box box1 bordered">
+            <div class="row"> 
+                    <div class="column">
+                      <img src="https://imgc.allpostersimages.com/img/print/posters/liang-zhang-spa-still-life-with-bamboo-fountain-and-zen-stone_a-G-10361261-14258382.jpg" width="350px">
+                      <img src="https://dev.upliftconnect.com/wp-content/uploads/2015/10/zen-arts_swordsmanship.jpg" width="350px">
+                      <img src="http://www.zen-buddhism.net/images/satori.jpg" width="350px">
+                    </div>
+                    <div class="column">
+                      <img src="http://www.krishna-is-cool.de/wp-content/themes/placeholder/images/logo2.png" width="350px">
+                      <img src="https://cdn.dollsofindia.com/images/p/shiva-pictures/krishna-sitting-on-lap-of-ganesha-in-shivas-abode-PY10_l.jpg" width="350px">
+                      <img src="http://cdn.tinybuddha.com/wp-content/uploads/2010/04/Tiny-Buddha1.jpg" width="350px">
+                    </div> 
+                    <div class="column">
+                      <img src="http://www.twinflames1111.com/blog/wp-content/uploads/2018/01/twin-flame-cosmic.jpg" width="350px">
+                      <img src="https://i.pinimg.com/originals/fe/62/cc/fe62cc67df9f59d3b9a35a2454af3e4d.jpg" width="350px">
+                      <img src="https://vignette.wikia.nocookie.net/fcoc-vs-battles/images/c/ca/The_Three_Renegades.jpg/revision/latest?cb=20180718040023" width="350px">
+                    </div>
+                  </div>
+    </div>
 
-}};
-
-
-
-</script>
-
-  </body>
+    <div class="box box2">
+    </div>
+ 
+    <script>
+        /// ACTIONS
+        var appendAnElement = function(){
+            $('.box1').append("<h3>Hello, World!</h3>");
+        }
+        var prependAnElement = function(){
+            $('.box1').prepend('<h3>I\'m prepended!</h3>');
+        }
+        var appendToAnElement = function(){
+            $("<h3>This is appended</h3>").appendTo('.box2');
+        }
+        var prependToAnElement = function(){
+            $("<h3>This one is prepended</h3>").prependTo('.box2');
+        }
+        var afterAnElement = function(){
+            $('.box').after("<h3>I'm after things!</h3>");
+        }
+        var beforeAnElement = function(){
+            $('.box').before("<h3>I'm before things!</h3>");
+        }
+        var removeThemAll = function(){
+            $('h3').remove();
+        }
+        //EVENTS
+        // $('#prepend').click(function(){
+        //     prependAnElement();
+        // })
+        // $('#append').click(function(){
+        //     appendAnElement();
+        // });
+        // $('#appendTo').click(function(){
+        //     appendToAnElement();
+        // });
+        
+        // $('#prependTo').click(function(){
+        //     prependToAnElement();
+        // });
+        // $('#after').click(function(){
+        //     afterAnElement();
+        // });
+        // $('#before').click(function(){
+        //     beforeAnElement();
+        // });
+        // $('#remove').click(function(){
+        //     removeThemAll();
+        // });
+        
+        // A MUCH SHORTER WAY TO WRITE LINES 64-89:
+         $('button').click(function(evnt){
+            var thisID = $(evnt.target).attr('id');
+            if(thisID === 'remove'){
+                removeThemAll();
+            }
+            else {
+                var functionName = thisID+"AnElement";
+                window[functionName]();
+            }
+        });
+    </script>
+</body>
 </html>
